@@ -9,6 +9,10 @@ import (
 func ServeHTTP() {
 	fmt.Println("Starting HTTP server at 127.0.0.1:8080")
 	http.HandleFunc("/", servePng)
+	http.HandleFunc("/bez.html", bezHTML)
+	http.HandleFunc("/bez.png", bezPNG)
+	http.HandleFunc("/bez.js", bezJS)
+	http.HandleFunc("/bez.api", bezAPI)
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		fmt.Println("Error serving: ", err)
