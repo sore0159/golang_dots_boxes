@@ -33,7 +33,7 @@ func (d *Dots) CreateImg() (image.Image, error) {
 
 	rect := image.Rect(0, 0, size, size)
 	img := image.NewRGBA(rect)
-	// img.Pix can be accessed manually
+	//               //
 	d.DrawBackground(img)
 	d.DrawInfo(img)
 	d.DrawBoxes(img)

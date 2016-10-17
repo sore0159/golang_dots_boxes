@@ -121,6 +121,9 @@ func main() {
 			fmt.Println("Error drawing dots: ", err)
 		}
 		fmt.Println("dots.png created")
+	case "-s", "-serve":
+		ServeHTTP()
+		return
 	default:
 		DisplayUsage()
 		return

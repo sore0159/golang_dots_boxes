@@ -11,6 +11,7 @@ func DisplayUsage() {
  dots -i[nfo]           Prints current game information:
                            game size, whose turn it is, current score
  dots -d[raw]           Creates dots.png file of current game state
+ dots -s[erve]          Starts a http server at :8080 to serve dots.png
  dots -v[ersion]        Prints version number
  dots -h[elp]           Prints out a description of Dots & Boxes
 `)

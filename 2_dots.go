@@ -1,3 +1,6 @@
+// See
+//    https://blog.golang.org/go-imagedraw-package
+// for some more details on this
 package main
 
 import (
@@ -20,8 +23,8 @@ type DotMask struct {
 func (m DotMask) ColorModel() color.Model {
 	return color.AlphaModel
 }
-func (d *Dots) Bounds() image.Rectangle {
-	size := (d.Size+1)*BOX_SIZE + d.Size*LINE_SIZE
+func (m DotMask) Bounds() image.Rectangle {
+	size := (m.Size+1)*BOX_SIZE + m.Size*LINE_SIZE
 	return image.Rect(0, 0, size, size)
 }
 func (m DotMask) At(x, y int) color.Color {
