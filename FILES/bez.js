@@ -123,17 +123,20 @@ var subButton = document.getElementById("subButton");
 subButton.addEventListener("mouseup", function() {
     putBez(pointList);
 });
-document.getElementById("changeButton").addEventListener("mouseup", function() {
+var changeButton = document.getElementById("changeButton");
+changeButton.addEventListener("mouseup", function() {
     var pt;
     if (pointList.length === 4) {
         pt = pointList.pop();
         pointList.pop();
         pointList.push(pt);
         drawBez(pointList);
+        changeButton.innerText = "Cubic";
     } else if (pointList.length < 4) {
         pt = pointList.pop();
         pointList.push([Math.random()*500, Math.random()*500]);
         pointList.push(pt);
         drawBez(pointList);
+        changeButton.innerText = "Quadratic";
     }
 });
