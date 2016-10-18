@@ -4,6 +4,7 @@ var pointList = [];
 var cMouseDown = false;
 var selectedButton = -1;
 
+canvas.oncontextmenu= function() { return false; };
 canvas.addEventListener("mousemove", dragButton);
 canvas.addEventListener("mousedown", function() {
     cMouseDown = true;
@@ -121,4 +122,18 @@ function blip(pt, ctx) {
 var subButton = document.getElementById("subButton");
 subButton.addEventListener("mouseup", function() {
     putBez(pointList);
+});
+document.getElementById("changeButton").addEventListener("mouseup", function() {
+    var pt;
+    if (pointList.length === 4) {
+        pt = pointList.pop();
+        pointList.pop();
+        pointList.push(pt);
+        drawBez(pointList);
+    } else if (pointList.length < 4) {
+        pt = pointList.pop();
+        pointList.push([Math.random()*500, Math.random()*500]);
+        pointList.push(pt);
+        drawBez(pointList);
+    }
 });

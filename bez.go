@@ -62,6 +62,7 @@ func bezHTML(w http.ResponseWriter, r *http.Request) {
         <canvas id="can" width=500 height=500 style="margin-top:0px;border: 2px solid black"></canvas>
         <img id="pic" width=500 height=500 style="margin-top:10px;border: 2px solid black">
 		<br>
+		<button style="font-size:x-large" id="changeButton">Change</button>
 		<button style="font-size:x-large" id="subButton">Submit</button>
 
         </center>
