@@ -57,9 +57,12 @@ func bezHTML(w http.ResponseWriter, r *http.Request) {
 <link rel="shortcut icon" href="yd32.ico">
 </head>
 <body>
+<h2 style="margin:0px;">Bezier Curves: draw me like one of your french mathematical equations</h2>
         <center>
-        <canvas id="can" width=500 height=500 style="margin-top:50px;border: 2px solid black"></canvas>
+        <canvas id="can" width=500 height=500 style="margin-top:0px;border: 2px solid black"></canvas>
         <img id="pic" width=500 height=500 style="margin-top:10px;border: 2px solid black">
+		<br>
+		<button style="font-size:x-large" id="subButton">Submit</button>
 
         </center>
 </body>
